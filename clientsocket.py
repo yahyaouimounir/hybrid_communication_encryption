@@ -23,7 +23,7 @@ def start_client():
     
     # Encrypt the symmetric key with the RSA public key
     cipher_rsa = PKCS1_OAEP.new(public_key)
-    encrypted_sym_key = cipher_rsa.encrypt(sym_key)
+    encrypted_sym_key = cipher_rsa.encrypt(sym_key)  #encrypt symetric key with the cipher
     
     # Send the encrypted symmetric key to the server
     client_socket.send(encrypted_sym_key)
